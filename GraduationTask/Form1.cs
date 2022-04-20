@@ -53,8 +53,8 @@ namespace GraduationTask
             {
                 if (item.SubItems[0].Text == tbSifra.Text)
                 {
-                    MessageBox.Show("ide");
                     item.Selected = true;
+                    tbNaziv.Text = item.SubItems[1].Text.ToString();
                     cbGrad.SelectedItem = item.SubItems[2].Text.ToString();
                 }
             }

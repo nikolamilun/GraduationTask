@@ -49,6 +49,7 @@ namespace GraduationTask
             this.Selo,
             this.Grad});
             this.listView1.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.listView1.FullRowSelect = true;
             this.listView1.HideSelection = false;
             this.listView1.Location = new System.Drawing.Point(283, 55);
             this.listView1.Name = "listView1";

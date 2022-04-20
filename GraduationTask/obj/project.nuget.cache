@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "3pZB+hQMHtB2y9+Y7pJrfma7jcjSanyit9UYegnou4OBzxLekeanOhKe9Fbtgk1KTn/vFLIWw+ysrJBm9uDosA==",
+  "dgSpecHash": "KDG5ITalY71obBwtSrbBnUE8fS793d5YFn5btXfsmF37oyZ/Inws/51w+l6d1uCsofWx/K78Gd6BsB7IlMlXYw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\nikol\\source\\repos\\GraduationTask\\.vs\\GraduationTask\\GraduationTask.csproj",
+  "projectFilePath": "C:\\Users\\nikol\\Documents\\GitHub\\GraduationTask\\GraduationTask\\GraduationTask.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\nikol\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",
     "C:\\Users\\nikol\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",

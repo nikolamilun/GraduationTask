@@ -459,11 +459,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\nikol\\source\\repos\\GraduationTask\\.vs\\GraduationTask\\GraduationTask.csproj",
+      "projectUniqueName": "C:\\Users\\nikol\\Documents\\GitHub\\GraduationTask\\GraduationTask\\GraduationTask.csproj",
       "projectName": "GraduationTask",
-      "projectPath": "C:\\Users\\nikol\\source\\repos\\GraduationTask\\.vs\\GraduationTask\\GraduationTask.csproj",
+      "projectPath": "C:\\Users\\nikol\\Documents\\GitHub\\GraduationTask\\GraduationTask\\GraduationTask.csproj",
       "packagesPath": "C:\\Users\\nikol\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\nikol\\source\\repos\\GraduationTask\\.vs\\GraduationTask\\obj\\",
+      "outputPath": "C:\\Users\\nikol\\Documents\\GitHub\\GraduationTask\\GraduationTask\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\nikol\\AppData\\Roaming\\NuGet\\NuGet.Config",
