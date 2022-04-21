@@ -44,3 +44,6 @@ C:\Users\nikol\Documents\GitHub\GraduationTask\GraduationTask\obj\Debug\netcorea
 C:\Users\nikol\Documents\GitHub\GraduationTask\GraduationTask\obj\Debug\netcoreapp3.1\GraduationTask.dll
 C:\Users\nikol\Documents\GitHub\GraduationTask\GraduationTask\obj\Debug\netcoreapp3.1\GraduationTask.pdb
 C:\Users\nikol\Documents\GitHub\GraduationTask\GraduationTask\obj\Debug\netcoreapp3.1\GraduationTask.genruntimeconfig.cache
+C:\Users\nikol\Documents\GitHub\GraduationTask\GraduationTask\obj\Debug\netcoreapp3.1\GraduationTask.Properties.Resources.resources
+C:\Users\nikol\Documents\GitHub\GraduationTask\GraduationTask\obj\Debug\netcoreapp3.1\GraduationTask.Form2.resources
+C:\Users\nikol\Documents\GitHub\GraduationTask\GraduationTask\obj\Debug\netcoreapp3.1\GraduationTask.Form3.resources

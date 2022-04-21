@@ -40,6 +40,11 @@ namespace GraduationTask
             this.tbNaziv = new System.Windows.Forms.TextBox();
             this.cbGrad = new System.Windows.Forms.ComboBox();
             this.btnUnesiIzmene = new System.Windows.Forms.Button();
+            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+            this.btnDodeliVaucere = new System.Windows.Forms.ToolStripButton();
+            this.btnOAplikaciji = new System.Windows.Forms.ToolStripButton();
+            this.btnIzlaz = new System.Windows.Forms.ToolStripButton();
+            this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // listView1
@@ -53,7 +58,7 @@ namespace GraduationTask
             this.listView1.HideSelection = false;
             this.listView1.Location = new System.Drawing.Point(283, 55);
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(384, 352);
+            this.listView1.Size = new System.Drawing.Size(349, 352);
             this.listView1.TabIndex = 0;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
@@ -138,12 +143,64 @@ namespace GraduationTask
             this.btnUnesiIzmene.TabIndex = 7;
             this.btnUnesiIzmene.Text = "Unesi izmene >>>";
             this.btnUnesiIzmene.UseVisualStyleBackColor = true;
+            this.btnUnesiIzmene.Click += new System.EventHandler(this.btnUnesiIzmene_Click);
+            // 
+            // toolStrip1
+            // 
+            this.toolStrip1.Dock = System.Windows.Forms.DockStyle.Right;
+            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.btnDodeliVaucere,
+            this.btnOAplikaciji,
+            this.btnIzlaz});
+            this.toolStrip1.Location = new System.Drawing.Point(665, 0);
+            this.toolStrip1.Name = "toolStrip1";
+            this.toolStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
+            this.toolStrip1.Size = new System.Drawing.Size(135, 450);
+            this.toolStrip1.TabIndex = 8;
+            this.toolStrip1.Text = "toolStrip1";
+            // 
+            // btnDodeliVaucere
+            // 
+            this.btnDodeliVaucere.CheckOnClick = true;
+            this.btnDodeliVaucere.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnDodeliVaucere.Image = global::GraduationTask.Properties.Resources.voucherImage;
+            this.btnDodeliVaucere.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnDodeliVaucere.Name = "btnDodeliVaucere";
+            this.btnDodeliVaucere.Size = new System.Drawing.Size(132, 45);
+            this.btnDodeliVaucere.Text = "Dodeli Vaučere";
+            this.btnDodeliVaucere.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnDodeliVaucere.Click += new System.EventHandler(this.btnDodeliVaucere_Click);
+            // 
+            // btnOAplikaciji
+            // 
+            this.btnOAplikaciji.CheckOnClick = true;
+            this.btnOAplikaciji.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnOAplikaciji.Image = global::GraduationTask.Properties.Resources.Info;
+            this.btnOAplikaciji.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnOAplikaciji.Name = "btnOAplikaciji";
+            this.btnOAplikaciji.Size = new System.Drawing.Size(132, 45);
+            this.btnOAplikaciji.Text = "O Aplikaciji";
+            this.btnOAplikaciji.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnOAplikaciji.Click += new System.EventHandler(this.btnOAplikaciji_Click);
+            // 
+            // btnIzlaz
+            // 
+            this.btnIzlaz.CheckOnClick = true;
+            this.btnIzlaz.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnIzlaz.Image = global::GraduationTask.Properties.Resources.Exit;
+            this.btnIzlaz.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnIzlaz.Name = "btnIzlaz";
+            this.btnIzlaz.Size = new System.Drawing.Size(132, 45);
+            this.btnIzlaz.Text = "Izlaz";
+            this.btnIzlaz.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnIzlaz.Click += new System.EventHandler(this.btnIzlaz_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.btnUnesiIzmene);
             this.Controls.Add(this.cbGrad);
             this.Controls.Add(this.tbNaziv);
@@ -155,6 +212,8 @@ namespace GraduationTask
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
+            this.toolStrip1.ResumeLayout(false);
+            this.toolStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -173,6 +232,10 @@ namespace GraduationTask
         private System.Windows.Forms.TextBox tbNaziv;
         private System.Windows.Forms.ComboBox cbGrad;
         private System.Windows.Forms.Button btnUnesiIzmene;
+        private System.Windows.Forms.ToolStrip toolStrip1;
+        private System.Windows.Forms.ToolStripButton btnDodeliVaucere;
+        private System.Windows.Forms.ToolStripButton btnOAplikaciji;
+        private System.Windows.Forms.ToolStripButton btnIzlaz;
     }
 }
 

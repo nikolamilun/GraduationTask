@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 using System.Data.Common;
+using System.IO;
 
 namespace GraduationTask
 {
@@ -58,6 +59,69 @@ namespace GraduationTask
                     cbGrad.SelectedItem = item.SubItems[2].Text.ToString();
                 }
             }
+        }
+
+        private void btnUnesiIzmene_Click(object sender, EventArgs e)
+        {
+            using (SqlConnection cnn = new SqlConnection(@"Data Source= LIMUNPC\NIKOLASRVSQL; Initial Catalog= graduationTask; Integrated Security= true"))
+            {
+                cnn.Open();
+                int sifra;
+                bool moze = int.TryParse(tbSifra.Text, out sifra);
+                if (moze && tbNaziv.Text.Length < 16 && tbSifra.Text != "")
+                {
+                    using (SqlCommand cmd = new SqlCommand("updateSelo", cnn))
+                    {
+                        cmd.CommandType = CommandType.StoredProcedure;
+                        cmd.Parameters.Add("@id", SqlDbType.Int);
+                        cmd.Parameters["@id"].Value = sifra;
+                        cmd.Parameters.Add("@nazivSelo", SqlDbType.NChar, 15);
+                        cmd.Parameters["@nazivSelo"].Value = tbNaziv.Text;
+                        cmd.Parameters.Add("@nazivGrad", SqlDbType.NChar, 15);
+                        cmd.Parameters["@nazivGrad"].Value = cbGrad.GetItemText(cbGrad.SelectedItem);
+                        try
+                        {
+                            if (cmd.ExecuteNonQuery() == 1)
+                            {
+                                MessageBox.Show("Uspesan upis!", "Uspeh", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                foreach (ListViewItem lwi in listView1.Items)
+                                {
+                                    if (lwi.SubItems[0].Text == tbSifra.Text)
+                                    {
+                                        lwi.SubItems[1].Text = tbNaziv.Text;
+                                        lwi.SubItems[2].Text = cbGrad.GetItemText(cbGrad.SelectedItem);
+                                    }
+                                }
+                            }
+                        }
+                        catch (Exception exc)
+                        {
+                            MessageBox.Show("Neuspesno!, razlog u datoteci error.txt", "Neuspeh", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            StreamWriter sr = new StreamWriter("error.txt", true);
+                            DateTime dt = DateTime.Now;
+                            sr.WriteLine(dt.ToString() + " - error message: " + exc.Message);
+                            sr.Close();
+                        }
+                    }
+                }
+            }
+        }
+
+        private void btnIzlaz_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void btnOAplikaciji_Click(object sender, EventArgs e)
+        {
+            Form3 popup = new Form3();
+            popup.Show();
+        }
+
+        private void btnDodeliVaucere_Click(object sender, EventArgs e)
+        {
+            Form2 popup = new Form2();
+            popup.Show();
         }
     }
 }
