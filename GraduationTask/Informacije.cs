@@ -8,9 +8,9 @@ using System.Windows.Forms;
 
 namespace GraduationTask
 {
-    public partial class Form3 : Form
+    public partial class Informacije : Form
     {
-        public Form3()
+        public Informacije()
         {
             InitializeComponent();
         }

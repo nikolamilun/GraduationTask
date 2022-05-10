@@ -1,7 +1,7 @@
 ﻿
 namespace GraduationTask
 {
-    partial class Form2
+    partial class Vauceri
     {
         /// <summary>
         /// Required designer variable.

@@ -34,7 +34,6 @@ C:\Users\nikol\Documents\GitHub\GraduationTask\GraduationTask\bin\Debug\netcorea
 C:\Users\nikol\Documents\GitHub\GraduationTask\GraduationTask\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
 C:\Users\nikol\Documents\GitHub\GraduationTask\GraduationTask\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
 C:\Users\nikol\Documents\GitHub\GraduationTask\GraduationTask\obj\Debug\netcoreapp3.1\GraduationTask.csproj.AssemblyReference.cache
-C:\Users\nikol\Documents\GitHub\GraduationTask\GraduationTask\obj\Debug\netcoreapp3.1\GraduationTask.Form1.resources
 C:\Users\nikol\Documents\GitHub\GraduationTask\GraduationTask\obj\Debug\netcoreapp3.1\GraduationTask.csproj.GenerateResource.cache
 C:\Users\nikol\Documents\GitHub\GraduationTask\GraduationTask\obj\Debug\netcoreapp3.1\GraduationTask.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\nikol\Documents\GitHub\GraduationTask\GraduationTask\obj\Debug\netcoreapp3.1\GraduationTask.AssemblyInfoInputs.cache
@@ -45,5 +44,7 @@ C:\Users\nikol\Documents\GitHub\GraduationTask\GraduationTask\obj\Debug\netcorea
 C:\Users\nikol\Documents\GitHub\GraduationTask\GraduationTask\obj\Debug\netcoreapp3.1\GraduationTask.pdb
 C:\Users\nikol\Documents\GitHub\GraduationTask\GraduationTask\obj\Debug\netcoreapp3.1\GraduationTask.genruntimeconfig.cache
 C:\Users\nikol\Documents\GitHub\GraduationTask\GraduationTask\obj\Debug\netcoreapp3.1\GraduationTask.Properties.Resources.resources
-C:\Users\nikol\Documents\GitHub\GraduationTask\GraduationTask\obj\Debug\netcoreapp3.1\GraduationTask.Form2.resources
-C:\Users\nikol\Documents\GitHub\GraduationTask\GraduationTask\obj\Debug\netcoreapp3.1\GraduationTask.Form3.resources
+C:\Users\nikol\Documents\GitHub\GraduationTask\GraduationTask\obj\Debug\netcoreapp3.1\GraduationTask.Informacije.resources
+C:\Users\nikol\Documents\GitHub\GraduationTask\GraduationTask\obj\Debug\netcoreapp3.1\GraduationTask.Pocetna.resources
+C:\Users\nikol\Documents\GitHub\GraduationTask\GraduationTask\obj\Debug\netcoreapp3.1\GraduationTask.ServerName.resources
+C:\Users\nikol\Documents\GitHub\GraduationTask\GraduationTask\obj\Debug\netcoreapp3.1\GraduationTask.Vauceri.resources

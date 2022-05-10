@@ -11,11 +11,11 @@ using System.Collections;
 
 namespace GraduationTask
 {
-    public partial class Form2 : Form
+    public partial class Vauceri : Form
     {
         // The dictionary to store table data into
         Dictionary<int, string> dict;
-        public Form2()
+        public Vauceri()
         {
             InitializeComponent();
         }
@@ -25,7 +25,7 @@ namespace GraduationTask
             // Initalization of the dictionary
             dict = new Dictionary<int, string>();
             // Opening the SQL conncection
-            using (SqlConnection cnn = new SqlConnection(@"Data Source= " + Form1.serverName +"; Initial Catalog= graduationTask; Integrated Security= true"))
+            using (SqlConnection cnn = new SqlConnection(@"Data Source= " + Pocetna.serverName +"; Initial Catalog= graduationTask; Integrated Security= true"))
             {
                 // Aand another stored procedure
                 using (SqlCommand cmd = new SqlCommand("brRezPoKl", cnn))

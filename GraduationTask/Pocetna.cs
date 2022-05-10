@@ -1,4 +1,4 @@
-﻿using System;
+﻿ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -13,44 +13,72 @@ using System.IO;
 
 namespace GraduationTask
 {
-    public partial class Form1 : Form
+    public partial class Pocetna : Form
     {
         // Here you type the name of your SQL server instance
-        public static string serverName = "LIMUNPC\\NIKOLASRVSQL";
-        public Form1()
+        public static string serverName;
+        public Pocetna()
         {
             InitializeComponent();
         }
         // Start of the application
         private void Form1_Load(object sender, EventArgs e)
         {
-            // Opening the SQL connection
-            using (SqlConnection cnn = new SqlConnection(@"Data Source= " + serverName + "; Initial Catalog= graduationTask; Integrated Security= true"))
+            bool connected = false;
+            // Determine if the connection was established
+            while (!connected)
             {
-                cnn.Open();
-                // Use the procedure from the database
-                SqlCommand sela = new SqlCommand("seloPodaci", cnn);
-                sela.CommandType = CommandType.StoredProcedure;
-                // Reading data and putting it into the listView
-                using (SqlDataReader sdr = sela.ExecuteReader())
+                // Input of the SQL Server name (for individual users)    
+                ServerName question = new ServerName();
+                DialogResult dr = question.ShowDialog();
+                if (dr != DialogResult.OK)
                 {
-                    while (sdr.Read())
+                    MessageBox.Show("You must enter the server name in order to use the application!", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    Close();
+                }
+                else
+                {
+                    try
                     {
-                        ListViewItem lwi = new ListViewItem(sdr.GetValue(0).ToString());
-                        lwi.SubItems.Add(sdr.GetValue(1).ToString().Trim(' '));
-                        lwi.SubItems.Add(sdr.GetValue(2).ToString().Trim(' '));
-                        listView1.Items.Add(lwi);
+                        // The server name entered in the question form
+                        serverName = question.srvName;
+                        // Opening the SQL connection
+                        using (SqlConnection cnn = new SqlConnection(@"Data Source= " + serverName + "; Initial Catalog= graduationTask; Integrated Security= true"))
+                        {
+                            connected = true;
+                            cnn.Open();
+                            // Use the procedure from the database
+                            SqlCommand sela = new SqlCommand("seloPodaci", cnn);
+                            sela.CommandType = CommandType.StoredProcedure;
+                            // Reading data and putting it into the listView
+                            using (SqlDataReader sdr = sela.ExecuteReader())
+                            {
+                                while (sdr.Read())
+                                {
+                                    ListViewItem lwi = new ListViewItem(sdr.GetValue(0).ToString());
+                                    lwi.SubItems.Add(sdr.GetValue(1).ToString().Trim(' '));
+                                    lwi.SubItems.Add(sdr.GetValue(2).ToString().Trim(' '));
+                                    listView1.Items.Add(lwi);
+                                }
+                            }
+                            SqlCommand gradovi = new SqlCommand("SELECT Grad FROM grad ORDER BY Grad ASC", cnn);
+                            // Filling the comboBox
+                            using (SqlDataReader sdr = gradovi.ExecuteReader())
+                            {
+                                while (sdr.Read())
+                                {
+                                    cbGrad.Items.Add(sdr.GetValue(0).ToString().Trim(' '));
+                                }
+                            }
+                        }
+                    }
+                    catch (Exception exc)
+                    {
+                        connected = false;
+                        MessageBox.Show("Server connection error! Check if you have entered the right server name!", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
-                SqlCommand gradovi = new SqlCommand("SELECT Grad FROM grad ORDER BY Grad ASC", cnn);
-                // Filling the comboBox
-                using (SqlDataReader sdr = gradovi.ExecuteReader())
-                {
-                    while (sdr.Read())
-                    {
-                        cbGrad.Items.Add(sdr.GetValue(0).ToString().Trim(' '));
-                    }
-                }
+
             }
         }
 
@@ -129,14 +157,14 @@ namespace GraduationTask
         private void btnOAplikaciji_Click(object sender, EventArgs e)
         {
             // Opening another form
-            Form3 popup = new Form3();
+            Informacije popup = new Informacije();
             popup.Show();
         }
 
         private void btnDodeliVaucere_Click(object sender, EventArgs e)
         {
             // Yet another form
-            Form2 popup = new Form2();
+            Vauceri popup = new Vauceri();
             popup.Show();
         }
     }
